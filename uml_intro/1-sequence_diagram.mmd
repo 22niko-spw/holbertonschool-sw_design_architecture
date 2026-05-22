@@ -1,0 +1,11 @@
+```mermaid
+sequenceDiagram
+    participant User
+    participant Library
+    participant Loan
+    participant Book
+
+    User->>Library: create_loan(user, book)
+    Library->>Loan: new Loan(start_date, end_date, user, book)
+    Library->>Book: mark_as_unavailable()
+```
